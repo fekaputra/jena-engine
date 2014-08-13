@@ -28,6 +28,23 @@ public class CommonHelper {
         return TDBFactory.createDataset(URL);
     }
 
+    public static String readOwlFile(Dataset dataset, String owlFile) {
+        String defURI = "";
+        datasetWait(dataset);
+        dataset.begin(ReadWrite.WRITE);
+
+        Model model = dataset.getDefaultModel();
+        if (owlFile != null) {
+            model.read(owlFile);
+        }
+        defURI = model.getNsPrefixURI("");
+
+        dataset.commit();
+        dataset.end();
+
+        return defURI;
+    }
+
     public static OntModel readOrCreateFile(String URL) {
         OntModel model = ModelFactory.createOntologyModel();
         try {
@@ -66,14 +83,7 @@ public class CommonHelper {
      * @param URL
      */
     public static void writeFile(Dataset dataset, String URL) {
-        while (dataset.isInTransaction()) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-
+        datasetWait(dataset);
         dataset.begin(ReadWrite.READ);
 
         Model model = dataset.getDefaultModel();
@@ -92,5 +102,15 @@ public class CommonHelper {
         Reader reader = new StringReader(bibTexString);
         BibTeXParser parser = new BibTeXParser();
         return parser.parse(reader);
+    }
+
+    private static void datasetWait(Dataset dataset) {
+        while (dataset.isInTransaction()) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

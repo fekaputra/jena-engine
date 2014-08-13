@@ -1,0 +1,6 @@
+# select all dark chocolate inferred from the rules
+
+select distinct ?product
+where {
+	?product a :Product
+}
