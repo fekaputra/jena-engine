@@ -1,0 +1,28 @@
+@prefix : <http://www.cdlflex.org/rampup.owl#>.
+@include <RDFS>
+
+[rule-setQualified2:
+(?instance rdf:type :ProductInstance)
+
+(?m1 rdf:type :ProductMeasurement)
+(?m1 :hasProductInstance ?instance)
+(?m1 :isInstanceOfQualityMeasure :RATIOCACAO)
+(?m1 :measureValue ?mv1)
+lessThan(?mv1, 70)
+greaterThan(?mv1, 60)
+
+(?m2 rdf:type :ProductMeasurement)
+(?m2 :hasProductInstance ?instance)
+(?m2 :isInstanceOfQualityMeasure :RATIOSUGAR)
+(?m2 :measureValue ?mv2)
+lessThan(?mv2, 15)
+
+(?m3 rdf:type :ProductMeasurement)
+(?m3 :hasProductInstance ?instance)
+(?m3 :isInstanceOfQualityMeasure :RATIOMILK)
+(?m3 :measureValue ?mv3)
+lessThan(?mv3, 10)
+
+->
+(?instance :isInstanceOfProduct :Product_Dark_Chocolate)
+]

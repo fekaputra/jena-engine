@@ -1,0 +1,21 @@
+# Q-Theory-4: • Propositions 2: Which are the hypotheses investigated in experiments on inspection method PBR that include domain concept [domain concept] and synonyms?
+
+Select distinct ?Experiment_Name ?hypName    
+WHERE {
+    ?exp :experimentName ?Experiment_Name .
+    ?exp :hasExperimentBokTopic ?bok .
+    ?bok :bokTopicType ?topicType .
+    ?bok :bokTopicID ?topicName .
+    FILTER ( regex(?topicName, 'PBR', 'i') ) .
+    ?hyp :hasHypothesisExperiment ?exp .
+    ?hyp :hypothesisName ?hypName .
+    
+    OPTIONAL {
+	    ?c rdf:type :Concept .
+	    ?c :conceptName ?INPUT .
+	    ?c owl:sameAs ?cSameAs .
+	    ?cSameAs :conceptName ?def .
+	} 
+	    
+	FILTER ( regex(?hypName, ?def, "i") || regex(?hypName, ?INPUT, "i")).
+}

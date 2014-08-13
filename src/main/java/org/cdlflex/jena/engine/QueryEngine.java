@@ -10,82 +10,58 @@ import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 
-import org.apache.jena.riot.RDFDataMgr;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.cdlflex.jena.helper.OwlHelper;
-import org.cdlflex.jena.helper.excel.ExcelHelper;
+import org.cdlflex.jena.helper.CommonHelper;
+import org.cdlflex.jena.helper.QueryHelper;
 
+import com.hp.hpl.jena.ontology.Individual;
+import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
+import com.hp.hpl.jena.ontology.OntProperty;
+import com.hp.hpl.jena.ontology.OntResource;
 import com.hp.hpl.jena.query.Dataset;
 import com.hp.hpl.jena.query.ParameterizedSparqlString;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
-import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.query.ReadWrite;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.query.ResultSetFormatter;
-import com.hp.hpl.jena.rdf.model.AnonId;
-import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.rdf.model.RDFVisitor;
-import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.ResourceFactory;
+import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.reasoner.Reasoner;
 import com.hp.hpl.jena.reasoner.rulesys.GenericRuleReasoner;
 
 /**
- * PI Query Tester Designed to work with a custom inference engine & queries in
+ * QueryEngine Designed to work with a custom inference engine & queries in
  * files
- * 
- * @author Juang fajar.juang@gmail.com
  * 
  */
 public class QueryEngine {
-    private final String defaultURI;
-    private final Dataset dataset;
-    private final Workbook workbook;
-
-    private OntModel model;
     private OutputStream outputStream;
-    private Sheet sheet;
+    private OntModel model;
+
+    private final Dataset dataset;
+    private final String defaultURI;
+    private final String ruleFile;
+    private final String outputFileFolder = "data/result/";
 
     /**
-     * Constructor.
      * 
+     * @param datasetLocation TDB dataset location.
      * @param owlFile owlfile name.
      * @param ruleFile custom rule file.
+     * @param isUsingFile whether the output should go to file or printed out.
      */
-    public QueryEngine(String owlFile, String ruleFile, boolean isUsingFile) {
-        model = null;
-        dataset = RDFDataMgr.loadDataset(owlFile);
-        defaultURI = dataset.getDefaultModel().getNsPrefixURI("");
-        workbook = new XSSFWorkbook();
-
-        if (!isUsingFile) {
-            outputStream = System.out;
-        } else {
-            try {
-                SimpleDateFormat sdf = new SimpleDateFormat("dd:MM:yyyy_HH:mm");
-                Date resultdate = new Date(System.currentTimeMillis());
-                outputStream = System.out;
-                outputStream = new FileOutputStream("result/output_" + sdf.format(resultdate) + ".txt");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        }
-
-        initRules(ruleFile);
+    public QueryEngine(String datasetLocation, String owlFile, String ruleFile, boolean isUsingFile) {
+        dataset = CommonHelper.readFile(datasetLocation);
+        defaultURI = CommonHelper.readOwlFile(dataset, owlFile);
+        this.ruleFile = ruleFile;
+        setOutput(isUsingFile);
     }
 
     /**
@@ -98,25 +74,158 @@ public class QueryEngine {
      * @param debug if this is true, will print SPARQL query in the terminal
      */
     public void QueryExec(String fileName, Map<String, String> params, boolean debug) {
+        dataset.begin(ReadWrite.READ);
+
+        initRules(ruleFile);
         ParameterizedSparqlString qString = new ParameterizedSparqlString();
         qString.setNsPrefixes(model.getNsPrefixMap());
-        sheet = workbook.createSheet(fileName.substring(fileName.lastIndexOf("/") + 1, fileName.lastIndexOf(".")));
         formulateQuery(qString, fileName);
         if (params != null && !params.isEmpty())
             setParam(qString, params);
         doQueryExec(fileName, qString, debug);
+
+        model.close();
+        dataset.end();
     }
 
+    /**
+     * Export model to a file.
+     * 
+     * @param filename
+     */
+    public void exportModel(String filename) {
+        dataset.begin(ReadWrite.READ);
+        initRules(ruleFile);
+
+        try (FileWriter writer = new FileWriter(filename)) {
+            model.writeAll(writer, null, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        model.close();
+        dataset.end();
+    }
+
+    /**
+     * DEMO purpose: show OntResource
+     * 
+     * @param URI
+     */
+    public void showOntResource(String URI) {
+        dataset.begin(ReadWrite.READ);
+        initRules(ruleFile);
+
+        OntResource resource = model.getOntResource(defaultURI + URI);
+        if (resource == null) {
+            try {
+                outputStream.write(("there is no resource: " + URI).getBytes());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return;
+        } else if (resource.isIndividual()) {
+            showIndividual(resource.asIndividual());
+        } else if (resource.isClass()) {
+            showClass(resource.asClass());
+        }
+
+        model.close();
+        dataset.end();
+    }
+
+    /**
+     * If resource is an individual (i.e., instance of class), show list of its
+     * properties
+     * 
+     * @param instance
+     */
+    private void showIndividual(Individual instance) {
+        StmtIterator stmtIter = instance.listProperties();
+        try {
+            outputStream.write(("Instance Name: " + instance.getLocalName() + "\n").getBytes());
+            while (stmtIter.hasNext()) {
+                outputStream.write((stmtIter.next().toString() + "\n").getBytes());
+            }
+            outputStream.write(("\n").getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * If resource is a class, show list of its properties
+     * 
+     * @param cls
+     */
+    private void showClass(OntClass cls) {
+        StmtIterator stmtIter = cls.listProperties();
+        try {
+            outputStream.write(("Class Name: " + cls.getLocalName() + "\n").getBytes());
+            while (stmtIter.hasNext()) {
+                outputStream.write((stmtIter.next().toString() + "\n").getBytes());
+            }
+            outputStream.write(("\n").getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showListOfProperty(String URI, String propURI) {
+        dataset.begin(ReadWrite.READ);
+        initRules(ruleFile);
+
+        Individual ind = model.getIndividual(defaultURI + URI);
+        OntProperty prop = model.getOntProperty(defaultURI + propURI);
+        try {
+            outputStream.write(("Instance Name: " + ind.getLocalName() + "\n").getBytes());
+            outputStream.write(("Property Name: " + prop.getLocalName() + "\n").getBytes());
+            Iterator<RDFNode> iter = ind.listPropertyValues(prop);
+            while (iter.hasNext()) {
+                RDFNode node = iter.next();
+                outputStream.write(("Props: " + node.toString() + "\n").getBytes());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        model.close();
+        dataset.end();
+    }
+
+    /**
+     * Set output file; whether you want it to be saved into a file or printed
+     * out.
+     * 
+     * @param isUsingFile
+     */
+    private void setOutput(boolean isUsingFile) {
+        if (!isUsingFile) {
+            outputStream = System.out;
+        } else {
+            try {
+                SimpleDateFormat sdf = new SimpleDateFormat("dd:MM:yyyy_HH:mm");
+                Date resultdate = new Date(System.currentTimeMillis());
+                outputStream = new FileOutputStream(outputFileFolder + sdf.format(resultdate) + ".txt");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * Read query from a file, omit comments (and printed it out), and put it in
+     * a ParameterizedSparqlString.
+     * 
+     * @param qString
+     * @param fileName
+     */
     private void formulateQuery(ParameterizedSparqlString qString, String fileName) {
         try {
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             String brLine;
-            int i = 0;
             while ((brLine = br.readLine()) != null) {
                 if (brLine.startsWith("#")) {
-                    Row r = sheet.createRow(i++);
-                    Cell c = r.createCell(0, Cell.CELL_TYPE_STRING);
-                    c.setCellValue(brLine);
                     outputStream.write(brLine.concat("\n").getBytes());
                 } else {
                     qString.append(brLine);
@@ -131,6 +240,14 @@ public class QueryEngine {
         }
     }
 
+    /**
+     * The real execution of the query. Put the result directly to the outstream
+     * that is defined in the setOutput() method.
+     * 
+     * @param fileName
+     * @param qString
+     * @param debug
+     */
     private void doQueryExec(String fileName, ParameterizedSparqlString qString, boolean debug) {
         if (debug)
             System.out.println(qString.toString());
@@ -138,7 +255,8 @@ public class QueryEngine {
         long execTime = System.currentTimeMillis();
         QueryExecution qe = QueryExecutionFactory.create(qString.asQuery(), model);
         ResultSet rs = qe.execSelect();
-        ResultSetFormatter.out(outputStream, rs);
+        // ResultSetFormatter.out(outputStream, rs);
+        ResultSetFormatter.outputAsJSON(outputStream, rs);
         execTime = System.currentTimeMillis() - execTime;
         try {
             outputStream.write(("execution time: " + Long.toString(execTime) + " ms \n\n").getBytes());
@@ -147,75 +265,15 @@ public class QueryEngine {
         }
 
         qe.close();
-
-        doAnotherQuery(qString, fileName);
     }
 
-    private void doAnotherQuery(ParameterizedSparqlString qString, String sheetName) {
-        QueryExecution qe = QueryExecutionFactory.create(qString.asQuery(), model);
-        ResultSet rs = qe.execSelect();
-        List<String> vars = rs.getResultVars();
-        Iterator<String> it = vars.iterator();
-        if (workbook.getSheet(sheet.getSheetName()) == null) {
-            sheet = workbook
-                    .createSheet(sheetName.substring(sheetName.lastIndexOf("/") + 1, sheetName.lastIndexOf(".")));
-        }
-        Row r = sheet.createRow(sheet.getLastRowNum() + 1);
-        int cellCounter = 0;
-        CellStyle cs = workbook.createCellStyle();
-        Font f = workbook.createFont();
-        f.setBoldweight(Font.BOLDWEIGHT_BOLD);
-        cs.setFont(f);
-        while (it.hasNext()) {
-            Cell cell = r.createCell(cellCounter++);
-            cell.setCellValue(it.next().toUpperCase());
-            cell.setCellStyle(cs);
-        }
-
-        while (rs.hasNext()) {
-            QuerySolution qs = rs.next();
-            it = vars.iterator();
-            r = sheet.createRow(sheet.getLastRowNum() + 1);
-            cellCounter = 0;
-            while (it.hasNext()) {
-                RDFNode value = qs.get(it.next());
-                if (value == null)
-                    return;
-                String valueInString = (String) value.visitWith(new RDFVisitor() {
-
-                    @Override
-                    public Object visitURI(Resource r, String uri) {
-                        return r.getLocalName();
-                    }
-
-                    @Override
-                    public Object visitLiteral(Literal l) {
-                        return l.getValue().toString();
-                    }
-
-                    @Override
-                    public Object visitBlank(Resource r, AnonId id) {
-                        return "<Empty>";
-                    }
-                });
-                Cell cell = r.createCell(cellCounter++);
-                try {
-                    int inte = Integer.parseInt(valueInString);
-                    cell.setCellType(Cell.CELL_TYPE_NUMERIC);
-                    cell.setCellValue(inte);
-                } catch (Exception e) {
-                    cell.setCellValue(valueInString);
-                }
-            }
-        }
-        qe.close();
-
-        // column size adjustment
-        for (int i = sheet.getFirstRowNum(); i < sheet.getLastRowNum(); i++) {
-            sheet.autoSizeColumn(i);
-        }
-    }
-
+    /**
+     * It is possible to put parameter to the query using this function. The
+     * parameters should be structured as a Map.
+     * 
+     * @param qString
+     * @param params
+     */
     private void setParam(ParameterizedSparqlString qString, Map<String, String> params) {
         Iterator<String> paramIter = params.keySet().iterator();
         while (paramIter.hasNext()) {
@@ -225,30 +283,25 @@ public class QueryEngine {
         }
     }
 
+    /**
+     * 
+     * If there is rule file associated with the ontology, this function execute
+     * the rule file (and maybe built-in reasoner) to calculate the resulted
+     * facts.
+     * 
+     * @param ruleFile
+     */
     private void initRules(String ruleFile) {
         Model m = dataset.getDefaultModel();
         if (ruleFile != null) {
-            Reasoner reasoner = new GenericRuleReasoner(OwlHelper.readRules(defaultURI, ruleFile));
+            Reasoner reasoner = new GenericRuleReasoner(QueryHelper.readRules(defaultURI, ruleFile));
             reasoner = reasoner.bindSchema(m);
             OntModelSpec ontModelSpec = OntModelSpec.OWL_DL_MEM;
             ontModelSpec.setReasoner(reasoner);
             model = ModelFactory.createOntologyModel(ontModelSpec, m);
         } else {
-            OntModelSpec ontModelSpec = OntModelSpec.OWL_MEM;
+            OntModelSpec ontModelSpec = OntModelSpec.OWL_DL_MEM;
             model = ModelFactory.createOntologyModel(ontModelSpec, m);
         }
-    }
-
-    public void exportModel(String filename) {
-        try (FileWriter writer = new FileWriter(filename)) {
-            model.writeAll(writer, null, null);
-
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
-    }
-
-    public void exportResult(String filename) {
-        ExcelHelper.writeFile(workbook, filename);
     }
 }

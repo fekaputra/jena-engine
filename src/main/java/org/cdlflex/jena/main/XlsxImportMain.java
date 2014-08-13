@@ -8,11 +8,11 @@ import org.cdlflex.jena.engine.XlsxImportEngine;
  * @author Ekaputra
  * 
  */
-public class XlsxImporterMain {
+public class XlsxImportMain {
 
     private final XlsxImportEngine importer;
 
-    public XlsxImporterMain() {
+    public XlsxImportMain() {
         importer = new XlsxImportEngine();
     }
 
@@ -35,7 +35,7 @@ public class XlsxImporterMain {
     }
 
     public static void main(String[] args) {
-        XlsxImporterMain owl = new XlsxImporterMain();
+        XlsxImportMain owl = new XlsxImportMain();
 
         String rampup = "data/rampup/ramp";
         String esem = "data/esem/esem";

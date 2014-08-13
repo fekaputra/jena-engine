@@ -1,0 +1,39 @@
+@prefix : <http://www.cdl.ifs.tuwien.ac.at/xlsx2onto#>.
+
+[rule-factor:
+(?a rdf:type :Factor)
+(?a :factorName ?aName)
+(?a :factorID ?aID)
+uriConcat(:, 'CON_', ?aID, ?factor)
+->
+(?factor rdf:type :Concept)
+(?factor :conceptName ?aName)
+]
+
+[rule-rv:
+(?a rdf:type :ResponseVar)
+(?a :responseVarName ?aName)
+(?a :responseVarID ?aID)
+uriConcat(:, 'CON_', ?aID, ?rv)
+->
+(?rv rdf:type :Concept)
+(?rv :conceptName ?aName)
+]
+
+[rule1:
+(?a rdf:type :Concept)
+-> 
+(?a owl:sameAs ?a)]
+
+[rule2: 
+(?a rdf:type :Concept)
+(?b rdf:type :Concept) 
+(?a owl:sameAs ?b) 
+-> 
+(?b owl:sameAs ?a)]
+
+[rule3: 
+(?a owl:sameAs ?b)
+(?b owl:sameAs ?c)
+-> 
+(?a owl:sameAs ?c)]

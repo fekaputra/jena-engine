@@ -1,0 +1,1398 @@
+# Q-Theory-1: • Constructs 1: Which domain concepts have been used as factor treatments in experiments on inspection method PBR?
+{
+  "head": {
+    "vars": [ "Experiment_Name" , "concept" ]
+  } ,
+  "results": {
+    "bindings": [
+      
+    ]
+  }
+}
+execution time: 207 ms 
+
+# Q-Theory-2: • Which domain concepts have been used as response variables in experiments on inspection method PBR?
+{
+  "head": {
+    "vars": [ "Experiment_Name" , "concept" ]
+  } ,
+  "results": {
+    "bindings": [
+      
+    ]
+  }
+}
+execution time: 1242 ms 
+
+# Q-Theory-3: • Propositions 1: Which are the hypotheses investigated in experiments on inspection method PBR?
+{
+  "head": {
+    "vars": [ "Experiment_Name" , "Hypothesis_Statement" ]
+  } ,
+  "results": {
+    "bindings": [
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Compare the proposed Formal Specification-Based Inspection (FSBI) method with one of the popular inspection techniques known as perspective-based reading (PBR)." } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The FSBI may be more effective in detecting function-related defects than PBR" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Individuals applying PBR perform better than individuals using reading techniques with respect to their mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The experience of the subjects has no influence on their mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Teams applying PBR perform better than teams using a checklist with respect to their mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a difference between the meeting gains in the meeting-based N-fold inspection depending on whether teams used PBR or a checklist." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a difference between the meeting loss in the meeting-based N-fold inspection depending on whether teams used PBR or a checklist." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The overlap of commonly detected defects among perspectives in PBR teams is lower than the overlap among individuals in checklist teams." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Defects detected by PBR are more evenly distributed over the whole SRS document than those detected by checklist." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference in the defect detection rates of teams applying PBR compared to teams applying the Checklist technique. That is, every successive dilution of a PBR team with a non-PBR reviewer has only random effects on team scores." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The defect detection rates of teams applying PBR are higher compared to teams using the Checklist technique. That is, every successive dilution of a PBR team with a non-PBR reviewer decreases the effectiveness of the team." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference between Group 1 (ATM with Checklist and PG with PBR) and Group 2  (PG with Checklist and ATM with PBR) with respect to individual effectiveness/efficiency." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a difference between Group 1 (ATM with Checklist and PG with PBR)and Group 2  (PG with Checklist and ATM with PBR) with respect to individual effectiveness/efficiency." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference between subjects using PBR and subjects using Checklist with respect to individual effectiveness/efficiency." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a difference between subjects using PBR and subjects using Checklist with respect to individual effectiveness/efficiency." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference between subjects reading ATM and subjects reading PG with respect to individual effectiveness/efficiency." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a difference between subjects reading ATM and subjects reading PG with respect to individual effectiveness/efficiency." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Reviewer experience does not affect effectiveness when using PBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The PBR perspectives have the same effectiveness and efficiency." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The PBR perspectives find different defects." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Individual reviewers using PBR and Checklist find different defects." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Most defect identifications (i.e. sections of WD codes) will be preceded by combine knowledge actions (i.e. CK codes). Where WD is Write-Defect and CK is Combine-Knowledge." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference between the frequency of CK codes preceding defect reports and the average frequency of CK codes. Where CK is Combine-Knowledge." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The type of defects found by subjects should be related to the assigned PBR perspective." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference between the number of perspective-unique defects and the number of non-perspective unique defects found by each subject." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The use of specific types of knowledge, as evidenced by the KP, KW, KS, and KC codes during inspection, should correspond to the respective experience levels indicated on the experience self survey." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference between the number of domain-specific facts recalled by reviewers with different reported levels of experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Inspection techniques of software requirements documents A comparative study" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The three inspection techniques - Checklist, SBR and PBR have the same defect detection efficiency, obtained by inspectors through the inspection of software requirements." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Inspection techniques of software requirements documents A comparative study" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The three inspection techniques - Checklist, SBR and PBR different defect detection efficiency, obtained by inspectors through the inspection of software requirements." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Inspection techniques of software requirements documents A comparative study" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no association between the  inspection technique (Checklist, SBR and PBR) efficiency level and the  inspectors' software engineers experience level." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Inspection techniques of software requirements documents A comparative study" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is an association between the  inspection technique (Checklist, SBR and PBR) efficiency level and the  inspectors' software engineers experience level." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Performing And Analyzing Non-formal Inspections Of ERD" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The proposed measures are helpful tools for the researchers, educators and software companies to provide guidelines to improve the ERD design skills of software engineers and to improve their understanding level" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Performing And Analyzing Non-formal Inspections Of ERD" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The searching patterns influences the defect detection performance" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference in the defect detection rates of teams applying PBR as compared to teams applying the usual technique. That is, every successive dilution of a PBR team with non-PBR reviewers has only random effects on team scores." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The defect detection rates of teams applying PBR are higher compared to teams using the usual technique. That is, every time the PBR teams were diluted with non-PBR reviewers they tended to perform somewhat worse relative to the usual technique teams." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference between subjects in Group 1 and subjects in Group 2 with respect to their mean defect rate scores." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a difference between subjects in Group 1 and subjects in Group 2 with respect to their mean defect rate scores." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference between subjects using PBR and subjects using their usual technique with respect to their mean defect rate scores." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a difference between subjects using PBR and subjects using their usual technique with respect to their mean defect rate scores." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference between subjects reading the ATM document (or NASA_A document) and subjects reading the PG document (or NASA_B document) with respect to their mean defect rate scores." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a difference between subjects reading the ATM document (or NASA_A document) and subjects reading the PG document (or NASA_B document) with respect to their mean defect rate scores." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no significant difference between subjects reading documents from their domain and subjects reading documents not from their domain with respect to their mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a significant difference between subjects reading documents from their domain and subjects reading documents not from their domain with respect to their mean defect detection rates." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no significant difference between subjects using the analyst, module test and integration test scenario with respect to their mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a significant difference between subjects using the analyst, module test and integration test scenario with respect to their mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no significant difference between subjects reading documents from their domain and using the analyst, module test and integration test scenario with respect to their mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a significant difference between subjects reading documents from their domain and using the analyst, module test and integration test scenario with respect to their mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no significant difference between individual defect detection rates and meeting detection rates." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a significant difference between individual defect detection rates and meeting detection rates." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The different perspectives of Perspective-based Reading have a small overlap with respect to detected defects." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Checklist-Based Reading and PBR for UML Design Document Inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Subjects spend more time on inspection using PBR than using CBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Checklist-Based Reading and PBR for UML Design Document Inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Cost per defect of subjects who use PBR is lower than the cost per defect of subjects who use CBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Checklist-Based Reading and PBR for UML Design Document Inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference in defect detection effectiveness of subjects who use PBR inspection technique as compared to subjects who use CBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Checklist-Based Reading and PBR for UML Design Document Inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference in defect detection effectiveness of the 3-person virtual teams, which use PBR inspection technique as compared to the 3-person virtual teams, which use CBR inspection technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Reading Techniques for Defect Detection in UML Design Documents" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "An inspection team is as effective or more effective using CBR than it is using PBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Reading Techniques for Defect Detection in UML Design Documents" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "An inspection team using PBR finds defects at the same or higher cost per defect than a team using CBR for the defect detection phase of the inspection." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Reading Techniques for Defect Detection in UML Design Documents" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "An inspection team using PBR finds defects at the same or higher cost per defect as a team using CBR for the meeting phase of the inspection." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Reading Techniques for Defect Detection in UML Design Documents" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "An inspection team using PBR finds defects at the same or higher cost per defect than a team using CBR for all phases of the inspection." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a difference in defect detection effectiveness for three-person interacting teams using CBR vs. those using PBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a difference in false positives for threeperson interacting teams using CBR vs. those using PBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a difference in defect overlaps for threeperson interacting teams using CBR vs. those using PBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is a difference in effectiveness detecting different defect types of three-person interacting teams using CBR vs. those using PBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Interacting teams improve group performance by discovering new defects." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Interacting teams are effective in eliminating false positives." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Nominal teams outperform interacting teams in defect detection effectiveness." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Internally Replicated Comparison of Checklist and PBR of Code Documents" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "An inspection team is as effective or more effective using CBR than it is using PBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Internally Replicated Comparison of Checklist and PBR of Code Documents" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "An inspection team using PBR finds defects at the same or higher cost per defect than a team using CBR for the defect detection phase of the inspection." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Internally Replicated Comparison of Checklist and PBR of Code Documents" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "An inspection team using PBR finds defects at the same or higher cost per defect as a team using CBR for the meeting phase of the inspection." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Internally Replicated Comparison of Checklist and PBR of Code Documents" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "An inspection team using PBR finds defects at the same or higher cost per defect than a team using CBR for all phases of the inspection." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Are the Perspectives Really Different?" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The perspectives are assumed to have the same finding efficiency, i.e. the number of defects found per hour of inspection is not different for the various perspectives." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Are the Perspectives Really Different?" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The perspectives are assumed to have the same effectiveness or detection rates, i.e. the fraction of defects identified is not different for the various perspectives." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Are the Perspectives Really Different?" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The perspectives are assumed to find the same defects, i.e. the distributions over defects found are the same for the different perspectives." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Individuals applying PBR perform better than individuals using Ad-hoc reading with respect to their mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Individuals applying each PBR perspective respectively perform better than individuals applying Ad-hoc reading (no perspective) with respect to their mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference between individuals reading the different documents with respect to their mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference between subjects applying PBR on one document and those applying Ad-hoc on the other document and vice versa with respect to their mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The experience of the subjects has no influence on their mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Nominal PBR teams detect more defects than nominal Ad-hoc teams, i.e. they have a higher mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The defect detection rate of nominal teams is lower than the defect detection rate of the real teams." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "For any PBR perspective, there is a difference between the mean defect detection rates of different defect classes compared to the total mean defect detection rate." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "The overlap of commonly detected defects among perspectives is low." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference in defect detection effectiveness of subjects who use PBR inspection technique as compared to subjects who use CBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "Cost per defect of subjects who use PBR is lower than cost per defect of subjects who use CBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference in defect detection effectiveness of 3-person inspection teams that used PBR technique during individual inspection as compared to the teams that used CBR technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference in cost per defect of 3-person inspection teams that used PBR technique during individual inspection as compared to the teams that used CBR technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference between meeting gains and meeting losses of CBR teams." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "Hypothesis_Statement": { "type": "literal" , "value": "There is no difference between meeting gains and meeting losses of PBR teams." }
+      }
+    ]
+  }
+}
+execution time: 147 ms 
+
+# Q-Theory-4: • Propositions 2: Which are the hypotheses investigated in experiments on inspection method PBR that include domain concept [domain concept] and synonyms?
+{
+  "head": {
+    "vars": [ "Experiment_Name" , "hypName" ]
+  } ,
+  "results": {
+    "bindings": [
+      
+    ]
+  }
+}
+execution time: 213 ms 
+
+# Q-Theory-5: • Propositions 3: Which are the hypotheses investigated in experiments on inspection method PBR and construct [response variable] and synonyms?
+{
+  "head": {
+    "vars": [ "Experiment_Name" , "hypName" , "rvName" ]
+  } ,
+  "results": {
+    "bindings": [
+      
+    ]
+  }
+}
+execution time: 251 ms 
+
+# Q-Theory-6: • Propositions 4: Which are the hypotheses investigated in experiments on inspection method PBR and construct [factor treatment] and synonyms?
+#    OPTIONAL {
+#        ?c rdf:type :Concept .
+#        ?c :conceptName ?INPUT .
+#        ?c owl:sameAs ?cSameAs .
+#        ?cSameAs :conceptName ?def .
+#    } 
+#        
+#    FILTER ( regex(?factorName, ?def, "i") || regex(?factorName, ?INPUT, "i")).
+#    FILTER (regex(?factorName, ?INPUT, "i")).
+{
+  "head": {
+    "vars": [ "Experiment_Name" , "hypName" , "factorName" ]
+  } ,
+  "results": {
+    "bindings": [
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Compare the proposed Formal Specification-Based Inspection (FSBI) method with one of the popular inspection techniques known as perspective-based reading (PBR)." } ,
+        "hypName": { "type": "literal" , "value": "The FSBI may be more effective in detecting function-related defects than PBR" } ,
+        "factorName": { "type": "literal" , "value": "Evaluation method (FSBI and PBR)" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "hypName": { "type": "literal" , "value": "Individuals applying PBR perform better than individuals using reading techniques with respect to their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "hypName": { "type": "literal" , "value": "The experience of the subjects has no influence on their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "hypName": { "type": "literal" , "value": "Teams applying PBR perform better than teams using a checklist with respect to their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between the meeting gains in the meeting-based N-fold inspection depending on whether teams used PBR or a checklist." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between the meeting loss in the meeting-based N-fold inspection depending on whether teams used PBR or a checklist." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "hypName": { "type": "literal" , "value": "The overlap of commonly detected defects among perspectives in PBR teams is lower than the overlap among individuals in checklist teams." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "hypName": { "type": "literal" , "value": "Defects detected by PBR are more evenly distributed over the whole SRS document than those detected by checklist." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "hypName": { "type": "literal" , "value": "Individuals applying PBR perform better than individuals using reading techniques with respect to their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Background Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "hypName": { "type": "literal" , "value": "The experience of the subjects has no influence on their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Background Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "hypName": { "type": "literal" , "value": "Teams applying PBR perform better than teams using a checklist with respect to their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Background Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between the meeting gains in the meeting-based N-fold inspection depending on whether teams used PBR or a checklist." } ,
+        "factorName": { "type": "literal" , "value": "Background Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between the meeting loss in the meeting-based N-fold inspection depending on whether teams used PBR or a checklist." } ,
+        "factorName": { "type": "literal" , "value": "Background Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "hypName": { "type": "literal" , "value": "The overlap of commonly detected defects among perspectives in PBR teams is lower than the overlap among individuals in checklist teams." } ,
+        "factorName": { "type": "literal" , "value": "Background Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "hypName": { "type": "literal" , "value": "Defects detected by PBR are more evenly distributed over the whole SRS document than those detected by checklist." } ,
+        "factorName": { "type": "literal" , "value": "Background Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference in the defect detection rates of teams applying PBR compared to teams applying the Checklist technique. That is, every successive dilution of a PBR team with a non-PBR reviewer has only random effects on team scores." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "The defect detection rates of teams applying PBR are higher compared to teams using the Checklist technique. That is, every successive dilution of a PBR team with a non-PBR reviewer decreases the effectiveness of the team." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between Group 1 (ATM with Checklist and PG with PBR) and Group 2  (PG with Checklist and ATM with PBR) with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between Group 1 (ATM with Checklist and PG with PBR)and Group 2  (PG with Checklist and ATM with PBR) with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between subjects using PBR and subjects using Checklist with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between subjects using PBR and subjects using Checklist with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between subjects reading ATM and subjects reading PG with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between subjects reading ATM and subjects reading PG with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "Reviewer experience does not affect effectiveness when using PBR." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "The PBR perspectives have the same effectiveness and efficiency." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "The PBR perspectives find different defects." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "Individual reviewers using PBR and Checklist find different defects." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference in the defect detection rates of teams applying PBR compared to teams applying the Checklist technique. That is, every successive dilution of a PBR team with a non-PBR reviewer has only random effects on team scores." } ,
+        "factorName": { "type": "literal" , "value": "Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "The defect detection rates of teams applying PBR are higher compared to teams using the Checklist technique. That is, every successive dilution of a PBR team with a non-PBR reviewer decreases the effectiveness of the team." } ,
+        "factorName": { "type": "literal" , "value": "Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between Group 1 (ATM with Checklist and PG with PBR) and Group 2  (PG with Checklist and ATM with PBR) with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between Group 1 (ATM with Checklist and PG with PBR)and Group 2  (PG with Checklist and ATM with PBR) with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between subjects using PBR and subjects using Checklist with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between subjects using PBR and subjects using Checklist with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between subjects reading ATM and subjects reading PG with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between subjects reading ATM and subjects reading PG with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "Reviewer experience does not affect effectiveness when using PBR." } ,
+        "factorName": { "type": "literal" , "value": "Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "The PBR perspectives have the same effectiveness and efficiency." } ,
+        "factorName": { "type": "literal" , "value": "Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "The PBR perspectives find different defects." } ,
+        "factorName": { "type": "literal" , "value": "Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "Individual reviewers using PBR and Checklist find different defects." } ,
+        "factorName": { "type": "literal" , "value": "Experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference in the defect detection rates of teams applying PBR compared to teams applying the Checklist technique. That is, every successive dilution of a PBR team with a non-PBR reviewer has only random effects on team scores." } ,
+        "factorName": { "type": "literal" , "value": "PBR Perspective." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "The defect detection rates of teams applying PBR are higher compared to teams using the Checklist technique. That is, every successive dilution of a PBR team with a non-PBR reviewer decreases the effectiveness of the team." } ,
+        "factorName": { "type": "literal" , "value": "PBR Perspective." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between Group 1 (ATM with Checklist and PG with PBR) and Group 2  (PG with Checklist and ATM with PBR) with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "PBR Perspective." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between Group 1 (ATM with Checklist and PG with PBR)and Group 2  (PG with Checklist and ATM with PBR) with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "PBR Perspective." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between subjects using PBR and subjects using Checklist with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "PBR Perspective." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between subjects using PBR and subjects using Checklist with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "PBR Perspective." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between subjects reading ATM and subjects reading PG with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "PBR Perspective." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between subjects reading ATM and subjects reading PG with respect to individual effectiveness/efficiency." } ,
+        "factorName": { "type": "literal" , "value": "PBR Perspective." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "Reviewer experience does not affect effectiveness when using PBR." } ,
+        "factorName": { "type": "literal" , "value": "PBR Perspective." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "The PBR perspectives have the same effectiveness and efficiency." } ,
+        "factorName": { "type": "literal" , "value": "PBR Perspective." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "The PBR perspectives find different defects." } ,
+        "factorName": { "type": "literal" , "value": "PBR Perspective." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "hypName": { "type": "literal" , "value": "Individual reviewers using PBR and Checklist find different defects." } ,
+        "factorName": { "type": "literal" , "value": "PBR Perspective." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "hypName": { "type": "literal" , "value": "Most defect identifications (i.e. sections of WD codes) will be preceded by combine knowledge actions (i.e. CK codes). Where WD is Write-Defect and CK is Combine-Knowledge." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between the frequency of CK codes preceding defect reports and the average frequency of CK codes. Where CK is Combine-Knowledge." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "hypName": { "type": "literal" , "value": "The type of defects found by subjects should be related to the assigned PBR perspective." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between the number of perspective-unique defects and the number of non-perspective unique defects found by each subject." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "hypName": { "type": "literal" , "value": "The use of specific types of knowledge, as evidenced by the KP, KW, KS, and KC codes during inspection, should correspond to the respective experience levels indicated on the experience self survey." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between the number of domain-specific facts recalled by reviewers with different reported levels of experience." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Inspection techniques of software requirements documents A comparative study" } ,
+        "hypName": { "type": "literal" , "value": "The three inspection techniques - Checklist, SBR and PBR have the same defect detection efficiency, obtained by inspectors through the inspection of software requirements." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Inspection techniques of software requirements documents A comparative study" } ,
+        "hypName": { "type": "literal" , "value": "The three inspection techniques - Checklist, SBR and PBR different defect detection efficiency, obtained by inspectors through the inspection of software requirements." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Inspection techniques of software requirements documents A comparative study" } ,
+        "hypName": { "type": "literal" , "value": "There is no association between the  inspection technique (Checklist, SBR and PBR) efficiency level and the  inspectors' software engineers experience level." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Inspection techniques of software requirements documents A comparative study" } ,
+        "hypName": { "type": "literal" , "value": "There is an association between the  inspection technique (Checklist, SBR and PBR) efficiency level and the  inspectors' software engineers experience level." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Performing And Analyzing Non-formal Inspections Of ERD" } ,
+        "hypName": { "type": "literal" , "value": "The proposed measures are helpful tools for the researchers, educators and software companies to provide guidelines to improve the ERD design skills of software engineers and to improve their understanding level" } ,
+        "factorName": { "type": "literal" , "value": "Conducting an inspection." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Performing And Analyzing Non-formal Inspections Of ERD" } ,
+        "hypName": { "type": "literal" , "value": "The searching patterns influences the defect detection performance" } ,
+        "factorName": { "type": "literal" , "value": "Conducting an inspection." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference in the defect detection rates of teams applying PBR as compared to teams applying the usual technique. That is, every successive dilution of a PBR team with non-PBR reviewers has only random effects on team scores." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "hypName": { "type": "literal" , "value": "The defect detection rates of teams applying PBR are higher compared to teams using the usual technique. That is, every time the PBR teams were diluted with non-PBR reviewers they tended to perform somewhat worse relative to the usual technique teams." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between subjects in Group 1 and subjects in Group 2 with respect to their mean defect rate scores." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between subjects in Group 1 and subjects in Group 2 with respect to their mean defect rate scores." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between subjects using PBR and subjects using their usual technique with respect to their mean defect rate scores." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between subjects using PBR and subjects using their usual technique with respect to their mean defect rate scores." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between subjects reading the ATM document (or NASA_A document) and subjects reading the PG document (or NASA_B document) with respect to their mean defect rate scores." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference between subjects reading the ATM document (or NASA_A document) and subjects reading the PG document (or NASA_B document) with respect to their mean defect rate scores." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "hypName": { "type": "literal" , "value": "There is no significant difference between subjects reading documents from their domain and subjects reading documents not from their domain with respect to their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "hypName": { "type": "literal" , "value": "There is a significant difference between subjects reading documents from their domain and subjects reading documents not from their domain with respect to their mean defect detection rates." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "hypName": { "type": "literal" , "value": "There is no significant difference between subjects using the analyst, module test and integration test scenario with respect to their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "hypName": { "type": "literal" , "value": "There is a significant difference between subjects using the analyst, module test and integration test scenario with respect to their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "hypName": { "type": "literal" , "value": "There is no significant difference between subjects reading documents from their domain and using the analyst, module test and integration test scenario with respect to their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "hypName": { "type": "literal" , "value": "There is a significant difference between subjects reading documents from their domain and using the analyst, module test and integration test scenario with respect to their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "hypName": { "type": "literal" , "value": "There is no significant difference between individual defect detection rates and meeting detection rates." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "hypName": { "type": "literal" , "value": "There is a significant difference between individual defect detection rates and meeting detection rates." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "hypName": { "type": "literal" , "value": "The different perspectives of Perspective-based Reading have a small overlap with respect to detected defects." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Checklist-Based Reading and PBR for UML Design Document Inspection" } ,
+        "hypName": { "type": "literal" , "value": "Subjects spend more time on inspection using PBR than using CBR." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Checklist-Based Reading and PBR for UML Design Document Inspection" } ,
+        "hypName": { "type": "literal" , "value": "Cost per defect of subjects who use PBR is lower than the cost per defect of subjects who use CBR." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Checklist-Based Reading and PBR for UML Design Document Inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference in defect detection effectiveness of subjects who use PBR inspection technique as compared to subjects who use CBR." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Checklist-Based Reading and PBR for UML Design Document Inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference in defect detection effectiveness of the 3-person virtual teams, which use PBR inspection technique as compared to the 3-person virtual teams, which use CBR inspection technique." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Reading Techniques for Defect Detection in UML Design Documents" } ,
+        "hypName": { "type": "literal" , "value": "An inspection team is as effective or more effective using CBR than it is using PBR." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Reading Techniques for Defect Detection in UML Design Documents" } ,
+        "hypName": { "type": "literal" , "value": "An inspection team using PBR finds defects at the same or higher cost per defect than a team using CBR for the defect detection phase of the inspection." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Reading Techniques for Defect Detection in UML Design Documents" } ,
+        "hypName": { "type": "literal" , "value": "An inspection team using PBR finds defects at the same or higher cost per defect as a team using CBR for the meeting phase of the inspection." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Reading Techniques for Defect Detection in UML Design Documents" } ,
+        "hypName": { "type": "literal" , "value": "An inspection team using PBR finds defects at the same or higher cost per defect than a team using CBR for all phases of the inspection." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference in defect detection effectiveness for three-person interacting teams using CBR vs. those using PBR." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference in false positives for threeperson interacting teams using CBR vs. those using PBR." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference in defect overlaps for threeperson interacting teams using CBR vs. those using PBR." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference in effectiveness detecting different defect types of three-person interacting teams using CBR vs. those using PBR." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "hypName": { "type": "literal" , "value": "Interacting teams improve group performance by discovering new defects." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "hypName": { "type": "literal" , "value": "Interacting teams are effective in eliminating false positives." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "hypName": { "type": "literal" , "value": "Nominal teams outperform interacting teams in defect detection effectiveness." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference in defect detection effectiveness for three-person interacting teams using CBR vs. those using PBR." } ,
+        "factorName": { "type": "literal" , "value": "Performance of Interaction in Team." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference in false positives for threeperson interacting teams using CBR vs. those using PBR." } ,
+        "factorName": { "type": "literal" , "value": "Performance of Interaction in Team." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference in defect overlaps for threeperson interacting teams using CBR vs. those using PBR." } ,
+        "factorName": { "type": "literal" , "value": "Performance of Interaction in Team." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is a difference in effectiveness detecting different defect types of three-person interacting teams using CBR vs. those using PBR." } ,
+        "factorName": { "type": "literal" , "value": "Performance of Interaction in Team." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "hypName": { "type": "literal" , "value": "Interacting teams improve group performance by discovering new defects." } ,
+        "factorName": { "type": "literal" , "value": "Performance of Interaction in Team." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "hypName": { "type": "literal" , "value": "Interacting teams are effective in eliminating false positives." } ,
+        "factorName": { "type": "literal" , "value": "Performance of Interaction in Team." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "hypName": { "type": "literal" , "value": "Nominal teams outperform interacting teams in defect detection effectiveness." } ,
+        "factorName": { "type": "literal" , "value": "Performance of Interaction in Team." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Internally Replicated Comparison of Checklist and PBR of Code Documents" } ,
+        "hypName": { "type": "literal" , "value": "An inspection team is as effective or more effective using CBR than it is using PBR." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Internally Replicated Comparison of Checklist and PBR of Code Documents" } ,
+        "hypName": { "type": "literal" , "value": "An inspection team using PBR finds defects at the same or higher cost per defect than a team using CBR for the defect detection phase of the inspection." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Internally Replicated Comparison of Checklist and PBR of Code Documents" } ,
+        "hypName": { "type": "literal" , "value": "An inspection team using PBR finds defects at the same or higher cost per defect as a team using CBR for the meeting phase of the inspection." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Internally Replicated Comparison of Checklist and PBR of Code Documents" } ,
+        "hypName": { "type": "literal" , "value": "An inspection team using PBR finds defects at the same or higher cost per defect than a team using CBR for all phases of the inspection." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Are the Perspectives Really Different?" } ,
+        "hypName": { "type": "literal" , "value": "The perspectives are assumed to have the same finding efficiency, i.e. the number of defects found per hour of inspection is not different for the various perspectives." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Are the Perspectives Really Different?" } ,
+        "hypName": { "type": "literal" , "value": "The perspectives are assumed to have the same effectiveness or detection rates, i.e. the fraction of defects identified is not different for the various perspectives." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Are the Perspectives Really Different?" } ,
+        "hypName": { "type": "literal" , "value": "The perspectives are assumed to find the same defects, i.e. the distributions over defects found are the same for the different perspectives." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "hypName": { "type": "literal" , "value": "Individuals applying PBR perform better than individuals using Ad-hoc reading with respect to their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "hypName": { "type": "literal" , "value": "Individuals applying each PBR perspective respectively perform better than individuals applying Ad-hoc reading (no perspective) with respect to their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between individuals reading the different documents with respect to their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between subjects applying PBR on one document and those applying Ad-hoc on the other document and vice versa with respect to their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "hypName": { "type": "literal" , "value": "The experience of the subjects has no influence on their mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "hypName": { "type": "literal" , "value": "Nominal PBR teams detect more defects than nominal Ad-hoc teams, i.e. they have a higher mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "hypName": { "type": "literal" , "value": "The defect detection rate of nominal teams is lower than the defect detection rate of the real teams." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "hypName": { "type": "literal" , "value": "For any PBR perspective, there is a difference between the mean defect detection rates of different defect classes compared to the total mean defect detection rate." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "hypName": { "type": "literal" , "value": "The overlap of commonly detected defects among perspectives is low." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference in defect detection effectiveness of subjects who use PBR inspection technique as compared to subjects who use CBR." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "hypName": { "type": "literal" , "value": "Cost per defect of subjects who use PBR is lower than cost per defect of subjects who use CBR." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference in defect detection effectiveness of 3-person inspection teams that used PBR technique during individual inspection as compared to the teams that used CBR technique." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference in cost per defect of 3-person inspection teams that used PBR technique during individual inspection as compared to the teams that used CBR technique." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between meeting gains and meeting losses of CBR teams." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between meeting gains and meeting losses of PBR teams." } ,
+        "factorName": { "type": "literal" , "value": "Defect Detection Technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference in defect detection effectiveness of subjects who use PBR inspection technique as compared to subjects who use CBR." } ,
+        "factorName": { "type": "literal" , "value": "Performance of Interaction in Team." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "hypName": { "type": "literal" , "value": "Cost per defect of subjects who use PBR is lower than cost per defect of subjects who use CBR." } ,
+        "factorName": { "type": "literal" , "value": "Performance of Interaction in Team." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference in defect detection effectiveness of 3-person inspection teams that used PBR technique during individual inspection as compared to the teams that used CBR technique." } ,
+        "factorName": { "type": "literal" , "value": "Performance of Interaction in Team." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference in cost per defect of 3-person inspection teams that used PBR technique during individual inspection as compared to the teams that used CBR technique." } ,
+        "factorName": { "type": "literal" , "value": "Performance of Interaction in Team." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between meeting gains and meeting losses of CBR teams." } ,
+        "factorName": { "type": "literal" , "value": "Performance of Interaction in Team." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "hypName": { "type": "literal" , "value": "There is no difference between meeting gains and meeting losses of PBR teams." } ,
+        "factorName": { "type": "literal" , "value": "Performance of Interaction in Team." }
+      }
+    ]
+  }
+}
+execution time: 90 ms 
+
+# Q-Theory-7: • Explanations: Which are the reported findings of experiments on inspection method PBR?
+{
+  "head": {
+    "vars": [ "Experiment_Name" , "findingText" ]
+  } ,
+  "results": {
+    "bindings": [
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Compare the proposed Formal Specification-Based Inspection (FSBI) method with one of the popular inspection techniques known as perspective-based reading (PBR)." } ,
+        "findingText": { "type": "literal" , "value": "our method may be much more effective than PBR in detecting function-related defects but slightly less effective in detecting implementation-related defects." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "findingText": { "type": "literal" , "value": "Individuals and teams applying PBR found more defects than those using checklist." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "findingText": { "type": "literal" , "value": "Checklist teams had more effective team meetings during the N-fold inspection process." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "findingText": { "type": "literal" , "value": "The defects detected by PBR teams showed less overlap and were more evenly distributed through the whole document than those detected by the checklist teams." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "findingText": { "type": "literal" , "value": "The effectiveness and necessity of a team meeting depends greatly on the type of technique used for the individual reviews." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "findingText": { "type": "literal" , "value": "The results showed that PBR was more effective than Checklist for one of the two requirements documents used." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "findingText": { "type": "literal" , "value": "The results showed that for the same document on which PBR was more effective, the PBR and Checklist techniques were complementary." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "findingText": { "type": "literal" , "value": "A reviewer's experience in the PBR perspective appeared to have little impact on his or her effectiveness." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "findingText": { "type": "literal" , "value": "In terms of perspectives, there was not a large variation in the effectiveness (i.e. the overall number of defects detected) of the three perspectives overall." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "findingText": { "type": "literal" , "value": "While in most cases the perspectives turned out to find different defects (i.e. they were not correlated), in the case where the perspectives found similar defects (i.e. correlated) there was no overall benefit observed for the perspective-based technique. These results lead to important hypotheses about the particular aspects of the perspective-based approach that may lead to the overall benefit that has been observed." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "findingText": { "type": "literal" , "value": "A concrete result of this replication is that the Laboratory Package, which serves as a baseline for further experimental replications, has been evolved." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "findingText": { "type": "literal" , "value": "We believe that the development of a coding scheme from cognitive psychology literature supported reliable analysis of the PBR task. With an effective coding scheme, protocol analysis has the potential to describe expertise. Particularly in the Empirical Software Engineering (ESE) field, capturing and accelerating expertise is an important high-level goal that protocol analysis is designed to support." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "findingText": { "type": "literal" , "value": "The new approach presented in this study surpasses traditional high-level, \u201Cblack box\u201D studies in its ability to understand the cognitive mechanisms supporting PBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "findingText": { "type": "literal" , "value": "We found that perspective experience is brought into STM from LTM during the PBR task. Also, reviewers with higher levels of perspective-specific experience use significantly more perspective-specific knowledge, as indicated by the KP code." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Inspection techniques of software requirements documents A comparative study" } ,
+        "findingText": { "type": "literal" , "value": "The fact that the study indicates that each technique can be more effective in detecting a particular defect type contained in the requirements suggests the possibility of investing in defining new reading techniques for inspecting requirements documents. Such a technique could thus have characteristics from each: checklists, SBR, and PBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Inspection techniques of software requirements documents A comparative study" } ,
+        "findingText": { "type": "literal" , "value": "The non significant correlation between the experience of the inspectors and the number of faults detected by the techniques may indicate a starting point for\nnew research, to consider other characteristics of the participants such as  academic background and the level of knowledge about the techniques." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Performing And Analyzing Non-formal Inspections Of ERD" } ,
+        "findingText": { "type": "literal" , "value": "Detecting missing information type defects in the ERD is harder than detecting other defects." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Performing And Analyzing Non-formal Inspections Of ERD" } ,
+        "findingText": { "type": "literal" , "value": "Defining and identifying missing information in the ERD is harder than recognizing it." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Performing And Analyzing Non-formal Inspections Of ERD" } ,
+        "findingText": { "type": "literal" , "value": "Defects that are related with the cardinality and optionality of the relationships are harder to detect." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Performing And Analyzing Non-formal Inspections Of ERD" } ,
+        "findingText": { "type": "literal" , "value": "As the participants\u2019 eye fixation durations raises so do their performance value" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Performing And Analyzing Non-formal Inspections Of ERD" } ,
+        "findingText": { "type": "literal" , "value": "The difficulty level of a defect grows, participants spend more time viewing the defected area" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Performing And Analyzing Non-formal Inspections Of ERD" } ,
+        "findingText": { "type": "literal" , "value": "Search the ERD vertically perform better in defect detection process" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Performing And Analyzing Non-formal Inspections Of ERD" } ,
+        "findingText": { "type": "literal" , "value": "Strong reviewers indicate few false positives while the not-so- strong reviewers (relative to the others) are expected to indicate more." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "findingText": { "type": "literal" , "value": "In the first run (pilot study) of the experiment we only got significant results for teams using PBR on the generic documents. After the pilot study we made some changes to improve the experiment. In the 1995 run, PBR teams provided significantly better coverage of both NASA and generic documents." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "findingText": { "type": "literal" , "value": "We have also compared PBR and the usual technique with respect to the individual performance of reviewers. Although in most cases, reviewers using PBR found about the same number of defects as reviewers using their usual technique, PBR reviewers did perform significantly better on the generic documents in the 1995 run. This is an unexpected result, since the true benefit of PBR is expected to be seen at the level of teams which combine several different perspectives for improved coverage." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "findingText": { "type": "literal" , "value": "Individual defect detection can be performed with a good level of effectiveness by Perspective-based Reading." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "findingText": { "type": "literal" , "value": "Using Perspective-based Reading makes defect detection independent of a number of factors such as experience." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Checklist-Based Reading and PBR for UML Design Document Inspection" } ,
+        "findingText": { "type": "literal" , "value": "Defect detection effectiveness using both inspection techniques is similar." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Checklist-Based Reading and PBR for UML Design Document Inspection" } ,
+        "findingText": { "type": "literal" , "value": "Reviewers who use PBR spend less time on inspection than reviewers who use CBR." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Checklist-Based Reading and PBR for UML Design Document Inspection" } ,
+        "findingText": { "type": "literal" , "value": "Cost per defect of reviewers who use CBR is smaller." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Checklist-Based Reading and PBR for UML Design Document Inspection" } ,
+        "findingText": { "type": "literal" , "value": "CBR technique is more effective than PBR technique." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Reading Techniques for Defect Detection in UML Design Documents" } ,
+        "findingText": { "type": "literal" , "value": "Our results indicate that PBR is more effective than CBR (i.e., it resulted in inspection teams detecting on average 41% more unique defects than CBR)." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Reading Techniques for Defect Detection in UML Design Documents" } ,
+        "findingText": { "type": "literal" , "value": "The cost of defect detection using PBR is significantly lower than CBR (i.e., PBR exhibits on average a 58% cost per defect improvement over CBR)." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "findingText": { "type": "literal" , "value": "PBR teams report significantly less overlaps than CBR teams." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "findingText": { "type": "literal" , "value": "There is no difference in defect detection effectiveness between CBR and PBR teams." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "findingText": { "type": "literal" , "value": "There was no significant difference in effectiveness between CBR and PBR detecting syntactic, semantic and consistency defects." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "findingText": { "type": "literal" , "value": "The analysis showed that PBR teams reported fewer false positives than CBR teams, however, this result was significant for only one (out of two) inspected systems. Therefore, the ability of CBR and PBR to discriminate between true defects and false positives has to be further investigated as well." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "findingText": { "type": "literal" , "value": "Interacting groups do not detect a significant number of new defects. Moreover, meeting gains were significantly smaller than meeting losses for CBR teams" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "findingText": { "type": "literal" , "value": "and meeting gains were offset by meeting losses for PBR teams." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "findingText": { "type": "literal" , "value": "Interacting teams reported fewer false positives than nominal teams." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "findingText": { "type": "literal" , "value": "Nominal teams outperform interacting teams in defect detection effectiveness for CBR teams, and for PBR teams of one (out of two) inspected systems." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Internally Replicated Comparison of Checklist and PBR of Code Documents" } ,
+        "findingText": { "type": "literal" , "value": "The experiments add to the current knowledge that more advanced reading techniques, such as perspective-based reading, optimize and improve software inspections by leveraging their effectiveness and reducing their cost." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Are the Perspectives Really Different?" } ,
+        "findingText": { "type": "literal" , "value": "There is no significant difference among the three perspectives in terms of defect detection rate and number of defects found per hour." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Are the Perspectives Really Different?" } ,
+        "findingText": { "type": "literal" , "value": "There is no significant difference in the defect coverage of the three perspectives." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Are the Perspectives Really Different?" } ,
+        "findingText": { "type": "literal" , "value": "A simulation study shows that 30 subjects is enough to detect relatively small perspective differences with the chosen statistical test." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Are the Perspectives Really Different?" } ,
+        "findingText": { "type": "literal" , "value": "A combination of multiple perspectives may not give higher coverage of the defects compared to single-perspective reading." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "findingText": { "type": "literal" , "value": "PBR helps to increase individual and team defect detection effectiveness compared to an Ad-hoc approach." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "findingText": { "type": "literal" , "value": "We found no statistically significant difference between real and nominal teams." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "findingText": { "type": "literal" , "value": "The analysis according to different defect classes only yield few statistically significant results due to the experimental setting." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "findingText": { "type": "literal" , "value": "The cost per defect of PBR subjects was higher as compared to CBR subjects." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "findingText": { "type": "literal" , "value": "The effectiveness of CBR and PBR subjects was similar." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "findingText": { "type": "literal" , "value": "There was no statistically significant difference between 3-person CBR and PBR teams with respect to defect detection effectiveness and cost per defect." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "findingText": { "type": "literal" , "value": "The CBR teams exhibit greater meeting losses than meeting gains" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "findingText": { "type": "literal" , "value": "meanwhile PBR teams exhibit similar meeting losses and meeting gains." }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "findingText": { "type": "literal" , "value": "The CBR 3-person team meetings are less beneficial than PBR 3-person team meetings." }
+      }
+    ]
+  }
+}
+execution time: 670 ms 
+
+# Q-Theory-8: • Scope: What are the BoK Topics (parameters) and contexts of experiments on inspection method PBR?
+{
+  "head": {
+    "vars": [ "Experiment_Name" , "Context" , "TopicType" ]
+  } ,
+  "results": {
+    "bindings": [
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Compare the proposed Formal Specification-Based Inspection (FSBI) method with one of the popular inspection techniques known as perspective-based reading (PBR)." } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "PBR vesus Checklist: A Replication in the N-Fold Inspection Context" } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-Based Reading: A Replicated Experiment Focused on Individual Reviewer Effectiveness" } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Cognitive Factors in Perspective-Based Reading" } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Inspection techniques of software requirements documents A comparative study" } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Performing And Analyzing Non-formal Inspections Of ERD" } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "The Empirical Investigation of Perspective-Based Reading" } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Perspective-based Reading of Code Documents at Robert Bosch GmbH" } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Checklist-Based Reading and PBR for UML Design Document Inspection" } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Experimental Comparison of Reading Techniques for Defect Detection in UML Design Documents" } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Assessing defect detection performance of interacting teams in object-oriented design inspection" } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "An Internally Replicated Comparison of Checklist and PBR of Code Documents" } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Are the Perspectives Really Different?" } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Empirical Investigation of PBR: A Replicated Experiment" } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      } ,
+      {
+        "Experiment_Name": { "type": "literal" , "value": "Comparing Reading Techniques for Object-Oriented Design Inspection" } ,
+        "Context": { "type": "literal" , "value": "Toy" } ,
+        "TopicType": { "type": "literal" , "value": "Defect Detection Technique" }
+      }
+    ]
+  }
+}
+execution time: 41 ms 
+

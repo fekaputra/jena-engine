@@ -22,7 +22,7 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.reasoner.rulesys.Rule;
 
-public class OwlHelper {
+public class QueryHelper {
 
 	/**
 	 * read the query from file

@@ -1,0 +1,17 @@
+# Q-Theory-7: • Explanations: Which are the reported findings of experiments on inspection method PBR?
+
+Select distinct ?Experiment_Name ?findingText      
+
+WHERE {
+    
+    ?exp :experimentName ?Experiment_Name .
+    ?exp :hasExperimentBokTopic ?bok .
+    ?bok :bokTopicType ?topicType .
+    ?bok :bokTopicID ?topicName .
+    
+    FILTER ( regex(?topicName, 'PBR', 'i') ) .
+    
+    ?finding rdf:type :Finding .
+    ?finding :hasFindingPublication/:hasPublicationExperiment ?exp .
+    ?finding :findingName ?findingText
+}
