@@ -1,0 +1,8 @@
+# select all person + fullname
+
+select ?person ?person_name
+where {
+	?person rdf:type :Person .
+	?person :fullname ?person_name 
+}
+order by ?person_name

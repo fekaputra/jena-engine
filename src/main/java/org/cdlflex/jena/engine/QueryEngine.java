@@ -255,8 +255,8 @@ public class QueryEngine {
         long execTime = System.currentTimeMillis();
         QueryExecution qe = QueryExecutionFactory.create(qString.asQuery(), model);
         ResultSet rs = qe.execSelect();
-        // ResultSetFormatter.out(outputStream, rs);
-        ResultSetFormatter.outputAsJSON(outputStream, rs);
+        ResultSetFormatter.out(outputStream, rs);
+        // ResultSetFormatter.outputAsJSON(outputStream, rs);
         execTime = System.currentTimeMillis() - execTime;
         try {
             outputStream.write(("execution time: " + Long.toString(execTime) + " ms \n\n").getBytes());

@@ -1,0 +1,8 @@
+# select all project + projectName
+
+select distinct ?project ?project_name
+where {
+	?project rdf:type :Project .
+	?project :projectName ?project_name 
+}
+order by ?project

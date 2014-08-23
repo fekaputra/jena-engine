@@ -1,8 +1,0 @@
-# select all dark chocolate inferred from the rules
-
-select distinct ?instance
-where {
-	?instance a :ProductInstance .
-	?instance :isInstanceOfProduct :Product_Dark_Chocolate 
-}
-order by ?instance

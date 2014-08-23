@@ -1,0 +1,15 @@
+# show who does what in which project
+
+select distinct ?project_name ?role_name ?person_name 
+where {
+	?resp rdf:type :Responsibility .
+	?resp :hasResponsibilityPerson ?person .
+	?person :fullname ?person_name .
+	?resp :hasResponsibilityProject ?project .
+	?project :projectName ?project_name .
+	?resp :hasResponsibilityRole ?role .
+	?role :roleName ?role_name .
+	?role :roleDescription ?role_description .
+	
+}
+order by ?project_name ?role_name
