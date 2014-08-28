@@ -1,0 +1,16 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://cdlflex.org/ske#"
+    xmlns:j.1="http://xmlns.com/foaf/0.1/" > 
+  <rdf:Description rdf:about="http://cdlflex.org/ske#d1">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <j.1:maker rdf:resource="http://cdlflex.org/ske#p1"/>
+    <j.1:homepage>http://cdlflex.org/ske#p1_d1</j.1:homepage>
+    <j.0:oid>d1</j.0:oid>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ske#p1">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <j.1:name>Fajar Juang</j.1:name>
+    <j.0:oid>p1</j.0:oid>
+  </rdf:Description>
+</rdf:RDF>

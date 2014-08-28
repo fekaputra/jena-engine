@@ -1,0 +1,385 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://cdlflex.org/ontology.owl#" > 
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PROJECT_0">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <projectID>0</projectID>
+    <isArchived>false</isArchived>
+    <projectName>magna in viverra Nulla mauris</projectName>
+    <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-04-29T00:00:00</startDate>
+    <plannedEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-10-04T00:00:00</plannedEndDate>
+    <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-08-21T00:00:00</endDate>
+    <projectStage>Implementation</projectStage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#Project">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#RESPONSIBILITY_25982">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Responsibility"/>
+    <responsibilityID>25982</responsibilityID>
+    <hasResponsibilityProject rdf:resource="http://cdlflex.org/ontology.owl#PROJECT_3"/>
+    <hasResponsibilityRole rdf:resource="http://cdlflex.org/ontology.owl#ROLE_22837"/>
+    <hasResponsibilityPerson rdf:resource="http://cdlflex.org/ontology.owl#PERSON_22847"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#ROLE_22835">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Role"/>
+    <roleID>22835</roleID>
+    <roleName>Tester</roleName>
+    <roleDescription>Description 3</roleDescription>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#RESPONSIBILITY_25986">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Responsibility"/>
+    <responsibilityID>25986</responsibilityID>
+    <hasResponsibilityProject rdf:resource="http://cdlflex.org/ontology.owl#PROJECT_4"/>
+    <hasResponsibilityRole rdf:resource="http://cdlflex.org/ontology.owl#ROLE_22841"/>
+    <hasResponsibilityPerson rdf:resource="http://cdlflex.org/ontology.owl#PERSON_22851"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PROJECT_1">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <projectID>1</projectID>
+    <isArchived>false</isArchived>
+    <projectName>id vehicula Nulla cubilia Cum</projectName>
+    <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-06-28T00:00:00</startDate>
+    <plannedEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-01-30T00:00:00</plannedEndDate>
+    <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-04-12T00:00:00</endDate>
+    <projectStage>Design</projectStage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#Responsibility">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PERSON_22846">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Person"/>
+    <personID>22846</personID>
+    <fullname>Hilel Alford</fullname>
+    <login>il305eCI</login>
+    <password>rg7&amp;4Ni</password>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#ROLE_22840">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Role"/>
+    <roleID>22840</roleID>
+    <roleName>Role 8</roleName>
+    <roleDescription>Description 8</roleDescription>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#isArchived">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#ROLE_22839">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Role"/>
+    <roleID>22839</roleID>
+    <roleName>Role 7</roleName>
+    <roleDescription>Description 7</roleDescription>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PROJECT_5">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <projectID>5</projectID>
+    <isArchived>false</isArchived>
+    <projectName>cubilia feugiat natoque aptent Vestibulum</projectName>
+    <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-03-14T00:00:00</startDate>
+    <plannedEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-12-27T00:00:00</plannedEndDate>
+    <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-04-13T00:00:00</endDate>
+    <projectStage>Implementation</projectStage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#personID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#roleDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Role"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#ROLE_22836">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Role"/>
+    <roleID>22836</roleID>
+    <roleName>Modeller</roleName>
+    <roleDescription>Description 4</roleDescription>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#roleName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Role"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#RESPONSIBILITY_25983">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Responsibility"/>
+    <responsibilityID>25983</responsibilityID>
+    <hasResponsibilityProject rdf:resource="http://cdlflex.org/ontology.owl#PROJECT_3"/>
+    <hasResponsibilityRole rdf:resource="http://cdlflex.org/ontology.owl#ROLE_22838"/>
+    <hasResponsibilityPerson rdf:resource="http://cdlflex.org/ontology.owl#PERSON_22848"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PERSON_22850">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Person"/>
+    <personID>22850</personID>
+    <fullname>Malik Bryant</fullname>
+    <login>HzMSKUUm</login>
+    <password>FZL2!q&amp;</password>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PERSON_22851">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Person"/>
+    <personID>22851</personID>
+    <fullname>Allen Walsh</fullname>
+    <login>idekNTj</login>
+    <password>6)?QH[7</password>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PROJECT_6">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <projectID>6</projectID>
+    <isArchived>true</isArchived>
+    <projectName>odio venenatis lacinia Morbi sollicitudin</projectName>
+    <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-01-30T00:00:00</startDate>
+    <plannedEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-11-11T00:00:00</plannedEndDate>
+    <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-06T00:00:00</endDate>
+    <projectStage>Finished</projectStage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PERSON_22849">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Person"/>
+    <personID>22849</personID>
+    <fullname>Dorian Schultz</fullname>
+    <login>AkFuNkw9</login>
+    <password>c.&lt;jF8</password>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PROJECT_2">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <projectID>2</projectID>
+    <isArchived>false</isArchived>
+    <projectName>auctor ultrices habitant nisl non</projectName>
+    <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-09-20T00:00:00</startDate>
+    <plannedEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-08-18T00:00:00</plannedEndDate>
+    <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-09-15T00:00:00</endDate>
+    <projectStage>Deployment</projectStage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#projectID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#projectName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PERSON_22845">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Person"/>
+    <personID>22845</personID>
+    <fullname>Richard Fernandez</fullname>
+    <login>SemTvB</login>
+    <password>~{~k4PT-</password>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#hasResponsibilityPerson">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Responsibility"/>
+    <rdfs:range rdf:resource="http://cdlflex.org/ontology.owl#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#ROLE_22837">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Role"/>
+    <roleID>22837</roleID>
+    <roleName>ReqProvider</roleName>
+    <roleDescription>Description 5</roleDescription>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#ROLE_22833">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Role"/>
+    <roleID>22833</roleID>
+    <roleName>ProjectLeader</roleName>
+    <roleDescription>Description 1</roleDescription>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#login">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#RESPONSIBILITY_25978">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Responsibility"/>
+    <responsibilityID>25978</responsibilityID>
+    <hasResponsibilityProject rdf:resource="http://cdlflex.org/ontology.owl#PROJECT_1"/>
+    <hasResponsibilityRole rdf:resource="http://cdlflex.org/ontology.owl#ROLE_22833"/>
+    <hasResponsibilityPerson rdf:resource="http://cdlflex.org/ontology.owl#PERSON_22843"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#responsibilityID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Responsibility"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#fullname">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#RESPONSIBILITY_25984">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Responsibility"/>
+    <responsibilityID>25984</responsibilityID>
+    <hasResponsibilityProject rdf:resource="http://cdlflex.org/ontology.owl#PROJECT_4"/>
+    <hasResponsibilityRole rdf:resource="http://cdlflex.org/ontology.owl#ROLE_22839"/>
+    <hasResponsibilityPerson rdf:resource="http://cdlflex.org/ontology.owl#PERSON_22849"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#roleID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Role"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#startDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PERSON_22844">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Person"/>
+    <personID>22844</personID>
+    <fullname>Honorato Adams</fullname>
+    <login>LzDcauQ5Vj</login>
+    <password>RQ</password>
+    <password>^Ewr</password>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PROJECT_3">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <projectID>3</projectID>
+    <isArchived>false</isArchived>
+    <projectName>vulputate parturient sociosqu ultricies aptent</projectName>
+    <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-09-02T00:00:00</startDate>
+    <plannedEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-12-24T00:00:00</plannedEndDate>
+    <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-12-25T00:00:00</endDate>
+    <projectStage>Implementation</projectStage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#RESPONSIBILITY_25981">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Responsibility"/>
+    <responsibilityID>25981</responsibilityID>
+    <hasResponsibilityProject rdf:resource="http://cdlflex.org/ontology.owl#PROJECT_3"/>
+    <hasResponsibilityRole rdf:resource="http://cdlflex.org/ontology.owl#ROLE_22836"/>
+    <hasResponsibilityPerson rdf:resource="http://cdlflex.org/ontology.owl#PERSON_22846"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PERSON_22848">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Person"/>
+    <personID>22848</personID>
+    <fullname>Naida Yates</fullname>
+    <login>puZ0cHU3hJ</login>
+    <password>xwVCNU</password>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#Role">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PROJECT_7">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <projectID>7</projectID>
+    <isArchived>false</isArchived>
+    <projectName>lorem mauris posuere sagittis iaculis</projectName>
+    <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-05-24T00:00:00</startDate>
+    <plannedEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-03-05T00:00:00</plannedEndDate>
+    <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-03-27T00:00:00</endDate>
+    <projectStage>Testing</projectStage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#plannedEndDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#RESPONSIBILITY_25985">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Responsibility"/>
+    <responsibilityID>25985</responsibilityID>
+    <hasResponsibilityProject rdf:resource="http://cdlflex.org/ontology.owl#PROJECT_4"/>
+    <hasResponsibilityRole rdf:resource="http://cdlflex.org/ontology.owl#ROLE_22840"/>
+    <hasResponsibilityPerson rdf:resource="http://cdlflex.org/ontology.owl#PERSON_22850"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#ROLE_22838">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Role"/>
+    <roleID>22838</roleID>
+    <roleName>Role 6</roleName>
+    <roleDescription>Description 6</roleDescription>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#ROLE_22834">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Role"/>
+    <roleID>22834</roleID>
+    <roleName>Developer</roleName>
+    <roleDescription>Description 2</roleDescription>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#hasResponsibilityRole">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Responsibility"/>
+    <rdfs:range rdf:resource="http://cdlflex.org/ontology.owl#Role"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#projectStage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#RESPONSIBILITY_25979">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Responsibility"/>
+    <responsibilityID>25979</responsibilityID>
+    <hasResponsibilityProject rdf:resource="http://cdlflex.org/ontology.owl#PROJECT_3"/>
+    <hasResponsibilityRole rdf:resource="http://cdlflex.org/ontology.owl#ROLE_22834"/>
+    <hasResponsibilityPerson rdf:resource="http://cdlflex.org/ontology.owl#PERSON_22844"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#password">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PROJECT_4">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <projectID>4</projectID>
+    <isArchived>false</isArchived>
+    <projectName>senectus pellentesque egestas egestas ultricies</projectName>
+    <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-07-07T00:00:00</startDate>
+    <plannedEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-08-12T00:00:00</plannedEndDate>
+    <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-06T00:00:00</endDate>
+    <projectStage>Implementation</projectStage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PERSON_22843">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Person"/>
+    <personID>22843</personID>
+    <fullname>Reed Stevenson</fullname>
+    <login>C5pfzzhGKG</login>
+    <password>95w)O{&amp;jA_</password>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#RESPONSIBILITY_25980">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Responsibility"/>
+    <responsibilityID>25980</responsibilityID>
+    <hasResponsibilityProject rdf:resource="http://cdlflex.org/ontology.owl#PROJECT_3"/>
+    <hasResponsibilityRole rdf:resource="http://cdlflex.org/ontology.owl#ROLE_22835"/>
+    <hasResponsibilityPerson rdf:resource="http://cdlflex.org/ontology.owl#PERSON_22845"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PROJECT_8">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <projectID>8</projectID>
+    <isArchived>true</isArchived>
+    <projectName>egestas Quisque Integer natoque purus</projectName>
+    <startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-10-14T00:00:00</startDate>
+    <plannedEndDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-12-12T00:00:00</plannedEndDate>
+    <endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-01-05T00:00:00</endDate>
+    <projectStage>Finished</projectStage>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#PERSON_22847">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Person"/>
+    <personID>22847</personID>
+    <fullname>Hall Ayala</fullname>
+    <login>mcH5Y2VFt7</login>
+    <password>8</password>
+    <password>U.dK4~</password>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#hasResponsibilityProject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Responsibility"/>
+    <rdfs:range rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#ROLE_22841">
+    <rdf:type rdf:resource="http://cdlflex.org/ontology.owl#Role"/>
+    <roleID>22841</roleID>
+    <roleName>Role 9</roleName>
+    <roleDescription>Description 9</roleDescription>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cdlflex.org/ontology.owl#endDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://cdlflex.org/ontology.owl#Project"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Description>
+</rdf:RDF>

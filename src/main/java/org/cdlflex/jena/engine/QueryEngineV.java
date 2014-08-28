@@ -14,6 +14,7 @@ import java.util.Map;
 
 import org.cdlflex.jena.helper.CommonHelper;
 import org.cdlflex.jena.helper.QueryHelper;
+import org.cdlflex.jena.metadata.Prefix;
 
 import com.hp.hpl.jena.ontology.Individual;
 import com.hp.hpl.jena.ontology.OntClass;
@@ -40,25 +41,27 @@ import com.hp.hpl.jena.reasoner.rulesys.GenericRuleReasoner;
  * QueryEngine Designed to work with a custom inference engine & queries in files
  * 
  */
-public class QueryEngine {
+public class QueryEngineV {
     private OutputStream outputStream;
     private OntModel model;
 
     private final Dataset dataset;
     private final String defaultURI;
     private final String ruleFile;
+    private final String namedGraph;
     private final String outputFileFolder = "data/result/";
 
     /**
      * 
      * @param datasetLocation TDB dataset location.
-     * @param owlFile owlfile name.
+     * @param namedGraph dataset namedgraph
      * @param ruleFile custom rule file.
      * @param isUsingFile whether the output should go to file or printed out.
      */
-    public QueryEngine(String datasetLocation, String owlFile, String ruleFile, boolean isUsingFile) {
+    public QueryEngineV(String datasetLocation, String namedGraph, String ruleFile, boolean isUsingFile) {
         dataset = CommonHelper.readFile(datasetLocation);
-        defaultURI = CommonHelper.readOwlFile(dataset, owlFile);
+        defaultURI = Prefix.SKE;
+        this.namedGraph = namedGraph;
         this.ruleFile = ruleFile;
         setOutput(isUsingFile);
     }
@@ -285,7 +288,7 @@ public class QueryEngine {
      * @param ruleFile
      */
     private void initRules(String ruleFile) {
-        Model m = dataset.getDefaultModel();
+        Model m = dataset.getNamedModel(namedGraph);
         if (ruleFile != null) {
             Reasoner reasoner = new GenericRuleReasoner(QueryHelper.readRules(defaultURI, ruleFile));
             reasoner = reasoner.bindSchema(m);

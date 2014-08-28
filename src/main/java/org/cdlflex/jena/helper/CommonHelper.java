@@ -45,6 +45,23 @@ public class CommonHelper {
         return defURI;
     }
 
+    public static String readOwlFile(Dataset dataset, String owlFile, String namedGraph) {
+        String defURI = "";
+        datasetWait(dataset);
+        dataset.begin(ReadWrite.WRITE);
+
+        Model model = dataset.getNamedModel(namedGraph);
+        if (owlFile != null) {
+            model.read(owlFile);
+        }
+        defURI = model.getNsPrefixURI("");
+
+        dataset.commit();
+        dataset.end();
+
+        return defURI;
+    }
+
     public static OntModel readOrCreateFile(String URL) {
         OntModel model = ModelFactory.createOntologyModel();
         try {
