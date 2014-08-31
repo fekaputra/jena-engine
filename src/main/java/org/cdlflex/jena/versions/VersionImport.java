@@ -1,4 +1,4 @@
-package org.cdlflex.jena.engine;
+package org.cdlflex.jena.versions;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -15,10 +15,8 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.cdlflex.jena.helper.CommonHelper;
-import org.cdlflex.jena.helper.excel.ExcelHelper;
-import org.cdlflex.jena.helper.excel.ExcelModel;
-import org.cdlflex.jena.helper.excel.ExcelModelEntry;
+import org.cdlflex.jena.excel.ExcelModel;
+import org.cdlflex.jena.excel.ExcelModelEntry;
 import org.jbibtex.BibTeXDatabase;
 import org.jbibtex.BibTeXEntry;
 import org.jbibtex.Key;
@@ -26,109 +24,43 @@ import org.jbibtex.ParseException;
 import org.jbibtex.Value;
 
 import com.hp.hpl.jena.datatypes.xsd.XSDDatatype;
-import com.hp.hpl.jena.query.Dataset;
-import com.hp.hpl.jena.query.ReadWrite;
 import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.ResourceFactory;
 import com.hp.hpl.jena.rdf.model.Statement;
+import com.hp.hpl.jena.vocabulary.OWL;
+import com.hp.hpl.jena.vocabulary.RDF;
+import com.hp.hpl.jena.vocabulary.RDFS;
 import com.hp.hpl.jena.vocabulary.XSD;
 
-/**
- * Hello world!
- * 
- */
-public class XlsxImportEngine {
-    Map<String, ExcelModel> modelMapper = new HashMap<String, ExcelModel>();
-    Dataset dataset;
-    XSSFWorkbook workbook;
+public class VersionImport {
 
-    public XlsxImportEngine() {
-        dataset = null;
-        workbook = null;
-    }
+    public Model importXlsx(String modelFile, String dataFile, Map<String, String> prefixes) {
+        Model model = ModelFactory.createDefaultModel();
+        model.setNsPrefixes(prefixes);
 
-    public void importXlsxModelToOwl(String excelSource, String owlTarget) {
-        init(excelSource, owlTarget);
-        importModel();
-        System.out.println("Successfully importing '" + excelSource + "' Model into '" + owlTarget);
-    }
-
-    public void importXlsxDataToOwl(String excelSource, String owlTarget) {
-        init(excelSource, owlTarget);
-        importData();
-        System.out.println("Successfully importing '" + excelSource + "' Model into '" + owlTarget);
-    }
-
-    public void writeToFile(String datasetURI, String owlTarget) {
-        Dataset temp = CommonHelper.readFile(datasetURI);
-        CommonHelper.writeFile(temp, owlTarget);
-    }
-
-    private void init(String excelSource, String owlTarget) {
-        dataset = CommonHelper.readFile(owlTarget);
-        workbook = ExcelHelper.readFile(excelSource);
-        storeModelMap(workbook);
-    }
-
-    private Resource createModelClass(Model model, String className, String superClassName) {
-
-        Resource owlThing = model.createResource(model.getNsPrefixURI("owl") + "Class");
-        Resource cls = model.createResource(model.getNsPrefixURI("") + className, owlThing);
-        if (superClassName != null) {
-            Resource superCls = model.createResource(model.getNsPrefixURI("") + superClassName);
-            cls.addProperty(model.createProperty(model.getNsPrefixURI("rdfs") + "subClassOf"), superCls);
+        if (modelFile != null) {
+            Map<String, ExcelModel> modelMapper = importModel(modelFile, model);
+            if (dataFile != null)
+                importData(model, modelMapper, dataFile);
         }
 
-        return cls;
+        return model;
     }
 
-    private Property createDatatypeProperty(Model model, Resource domain, Resource range, String propertyName) {
-        Property property = model.createProperty(model.getNsPrefixURI(""), propertyName);
+    private Map<String, ExcelModel> importModel(String modelFile, Model model) {
+        Map<String, ExcelModel> modelMapper = new HashMap<String, ExcelModel>();
+        XSSFWorkbook wbook = VersionHelper.readXlsxFile(modelFile);
+        storeModelMap(wbook, modelMapper);
+        executeImportModel(model, modelMapper);
 
-        Property propertyDomain = model.createProperty(model.getNsPrefixURI("rdfs") + "domain");
-        Property propertyRange = model.createProperty(model.getNsPrefixURI("rdfs") + "range");
-        Property rdfType = model.createProperty(model.getNsPrefixURI("rdf") + "type");
-
-        Resource propType = model.createResource(model.getNsPrefixURI("owl") + "DatatypeProperty");
-
-        model.add(model.createStatement(property, propertyDomain, domain));
-        model.add(model.createStatement(property, rdfType, propType));
-        if (range != null)
-            model.add(model.createStatement(property, propertyRange, range));
-
-        return property;
+        return modelMapper;
     }
 
-    private Property createObjectProperty(Model model, Resource domain, Resource range, String propertyName) {
-        Property property = model.createProperty(model.getNsPrefixURI(""), propertyName);
-
-        Property propertyDomain = model.createProperty(model.getNsPrefixURI("rdfs") + "domain");
-        Property propertyRange = model.createProperty(model.getNsPrefixURI("rdfs") + "range");
-        Property rdfType = model.createProperty(model.getNsPrefixURI("rdf") + "type");
-
-        Resource propType = model.createResource(model.getNsPrefixURI("owl") + "ObjectProperty");
-
-        model.add(model.createStatement(property, propertyDomain, domain));
-        model.add(model.createStatement(property, rdfType, propType));
-        if (range != null)
-            model.add(model.createStatement(property, propertyRange, range));
-
-        return property;
-    }
-
-    private void setFunctionalProperty(Model model, Property property) {
-        Property rdfType = model.createProperty(model.getNsPrefixURI("rdf") + "type");
-        Resource functional = model.createResource(model.getNsPrefixURI("owl") + "FunctionalProperty");
-        model.add(model.createStatement(property, rdfType, functional));
-    }
-
-    private void importModel() {
-        dataset.begin(ReadWrite.WRITE);
-        Model model = dataset.getDefaultModel();
-        setPrefix(model);
+    private void executeImportModel(Model model, Map<String, ExcelModel> modelMapper) {
 
         for (String sheetName : modelMapper.keySet()) {
             ExcelModel sheetModel = modelMapper.get(sheetName);
@@ -154,23 +86,11 @@ public class XlsxImportEngine {
                     }
                     property = createDatatypeProperty(model, sheetClass, classRange, modelEntry.getOntoProperty());
                     if (modelEntry.getKey().equalsIgnoreCase("pk")) {
-                        setFunctionalProperty(model, property);
+                        model.add(property, RDF.type, OWL.FunctionalProperty);
                     }
                 }
             }
         }
-
-        model.close();
-        dataset.commit();
-        dataset.end();
-    }
-
-    private void setPrefix(Model model) {
-        model.setNsPrefix("", "http://cdlflex.org/ontology.owl#");
-        model.setNsPrefix("rdfs", "http://www.w3.org/2000/01/rdf-schema#");
-        model.setNsPrefix("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
-        model.setNsPrefix("owl", "http://www.w3.org/2002/07/owl#");
-        model.setNsPrefix("xsd", "http://www.w3.org/2001/XMLSchema#");
     }
 
     private void createAddPropResource(Model model, Resource ontClass, List<String> additionalProps) {
@@ -181,33 +101,47 @@ public class XlsxImportEngine {
         }
     }
 
-    private void importData() {
+    private Property createObjectProperty(Model model, Resource domain, Resource range, String propertyName) {
+        Property property = model.createProperty(model.getNsPrefixURI(""), propertyName);
+
+        model.add(model.createStatement(property, RDFS.domain, domain));
+        model.add(model.createStatement(property, RDF.type, OWL.ObjectProperty));
+        if (range != null)
+            model.add(model.createStatement(property, RDFS.range, range));
+
+        return property;
+    }
+
+    private Resource createModelClass(Model model, String className, String superClassName) {
+
+        Resource cls = model.createResource(model.getNsPrefixURI("") + className, OWL.Class);
+        if (superClassName != null) {
+            Resource superCls = model.createResource(model.getNsPrefixURI("") + superClassName);
+            cls.addProperty(RDFS.subClassOf, superCls);
+        } else {
+            cls.addProperty(RDFS.subClassOf, OWL.Thing);
+        }
+
+        return cls;
+    }
+
+    private void importData(Model model, Map<String, ExcelModel> modelMapper, String dataFile) {
+        XSSFWorkbook workbook = VersionHelper.readXlsxFile(dataFile);
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         for (XSSFSheet xssfSheet : workbook) {
-            if (xssfSheet.getSheetName().equalsIgnoreCase(CommonHelper.MAPPING_SHEET))
+            if (xssfSheet.getSheetName().equalsIgnoreCase(VersionHelper.MAPPING_SHEET))
                 continue;
-            processSheet(xssfSheet);
+            processSheet(xssfSheet, modelMapper, model);
             System.out.println("At " + dateFormat.format(Calendar.getInstance().getTime()) + " done "
-                    + xssfSheet.getSheetName());
+                + xssfSheet.getSheetName());
         }
     }
 
-    private void processSheet(XSSFSheet sheet) {
+    private void processSheet(XSSFSheet sheet, Map<String, ExcelModel> modelMapper, Model model) {
 
         ExcelModel map = modelMapper.get(sheet.getSheetName());
         if (map == null)
             return;
-
-        while (dataset.isInTransaction()) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-
-        dataset.begin(ReadWrite.WRITE);
-        Model model = dataset.getDefaultModel();
 
         for (Row row : sheet) {
             Cell primaryKeyCell = row.getCell(map.getPrimaryKey());
@@ -237,10 +171,6 @@ public class XlsxImportEngine {
                 model.add(listStmt);
             }
         }
-
-        model.close();
-        dataset.commit();
-        dataset.end();
     }
 
     private List<Statement> processCell(Model model, Resource instance, ExcelModelEntry mapEntry, Cell cell) {
@@ -263,11 +193,12 @@ public class XlsxImportEngine {
 
                 if (mapEntry.getKey().equalsIgnoreCase("fk")) {
 
-                    Resource domain = instanceProperty.getPropertyResourceValue(model.createProperty(model
-                            .getNsPrefixURI("rdfs") + "range"));
+                    Resource domain = instanceProperty.getPropertyResourceValue(RDFS.range);
+                    if (domain == null)
+                        continue;
                     instancePropertyValue = transformToKey(domain.getLocalName(), instancePropertyValue);
-                    instancePropertyObject = model.createResource(model.getNsPrefixURI("") + instancePropertyValue,
-                            domain);
+                    instancePropertyObject =
+                        model.createResource(model.getNsPrefixURI("") + instancePropertyValue, domain);
 
                     if (!mapEntry.getAdditionalProperties().isEmpty()) {
                         // TODO: HARDCODE
@@ -277,23 +208,25 @@ public class XlsxImportEngine {
                         Iterator<String> propsIterator = mapEntry.getAdditionalProperties().iterator();
                         while (propsIterator.hasNext()) {
                             String[] props = propsIterator.next().split("=");
-                            Property prop = createDatatypeProperty(model, instancePropertyObject.asResource(),
-                                    XSD.xstring, props[0]);
+                            Property prop =
+                                createDatatypeProperty(model, instancePropertyObject.asResource(), XSD.xstring,
+                                        props[0]);
                             model.add(instancePropertyObject.asResource(), prop,
                                     ResourceFactory.createPlainLiteral(props[1].trim()));
                         }
                     }
                 } else if (mapEntry.getDatatype().equalsIgnoreCase("Date")) {
-                    instancePropertyObject = ResourceFactory.createTypedLiteral(instancePropertyValue.trim(),
-                            XSDDatatype.XSDdate);
+                    instancePropertyObject =
+                        ResourceFactory.createTypedLiteral(instancePropertyValue.trim(), XSDDatatype.XSDdate);
                 } else if (mapEntry.getDatatype().equalsIgnoreCase("int")) {
-                    instancePropertyObject = ResourceFactory.createTypedLiteral(instancePropertyValue.trim(),
-                            XSDDatatype.XSDinteger);
+                    instancePropertyObject =
+                        ResourceFactory.createTypedLiteral(instancePropertyValue.trim(), XSDDatatype.XSDinteger);
                 } else {
                     instancePropertyObject = ResourceFactory.createPlainLiteral(instancePropertyValue.trim());
                 }
 
-                listStatement.add(ResourceFactory.createStatement(instance, instanceProperty, instancePropertyObject));
+                listStatement
+                        .add(ResourceFactory.createStatement(instance, instanceProperty, instancePropertyObject));
             }
         }
 
@@ -305,7 +238,7 @@ public class XlsxImportEngine {
 
         BibTeXDatabase bdb;
         try {
-            bdb = CommonHelper.parseBibTeX(bibTexString);
+            bdb = VersionHelper.parseBibTeX(bibTexString);
             Map<Key, BibTeXEntry> map = bdb.getEntries();
             Iterator<Key> iter = map.keySet().iterator();
             while (iter.hasNext()) {
@@ -319,9 +252,9 @@ public class XlsxImportEngine {
 
                     Key bibtexField = it.next();
 
-                    Property property = createDatatypeProperty(model, instance.getPropertyResourceValue(model
-                            .createProperty(model.getNsPrefixURI("rdf") + "type")), XSD.xstring, bibtexPrefix
-                            + bibtexField);
+                    Property property =
+                        createDatatypeProperty(model, instance.getPropertyResourceValue(RDF.type), XSD.xstring,
+                                bibtexPrefix + bibtexField);
 
                     Value v = m.get(bibtexField);
                     RDFNode node = ResourceFactory.createPlainLiteral(v.toUserString().trim());
@@ -333,8 +266,8 @@ public class XlsxImportEngine {
         }
     }
 
-    private void storeModelMap(XSSFWorkbook wbook) {
-        XSSFSheet sheet = wbook.getSheet(CommonHelper.MAPPING_SHEET);
+    private void storeModelMap(XSSFWorkbook wbook, Map<String, ExcelModel> modelMapper) {
+        XSSFSheet sheet = wbook.getSheet(VersionHelper.MAPPING_SHEET);
         if (sheet == null)
             return;
 
@@ -364,10 +297,21 @@ public class XlsxImportEngine {
             List<String> allowedVals = Arrays.asList(row.getCell(8).getStringCellValue().split(";"));
             List<String> addProps = Arrays.asList(row.getCell(9).getStringCellValue().split(";"));
 
-            ExcelModelEntry entry = new ExcelModelEntry(excelColumn, ontoProperty, key, datatype, num, card,
-                    allowedVals, addProps);
+            ExcelModelEntry entry =
+                new ExcelModelEntry(excelColumn, ontoProperty, key, datatype, num, card, allowedVals, addProps);
             map.put(num, entry);
         }
+    }
+
+    private Property createDatatypeProperty(Model model, Resource domain, Resource range, String propertyName) {
+        Property property = model.createProperty(model.getNsPrefixURI(""), propertyName);
+
+        model.add(model.createStatement(property, RDFS.domain, domain));
+        model.add(model.createStatement(property, RDF.type, OWL.DatatypeProperty));
+        if (range != null)
+            model.add(model.createStatement(property, RDFS.range, range));
+
+        return property;
     }
 
     private String transformToKey(String cls_name, String entry) {

@@ -1,4 +1,4 @@
-package org.cdlflex.jena.helper.excel;
+package org.cdlflex.jena.excel;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
